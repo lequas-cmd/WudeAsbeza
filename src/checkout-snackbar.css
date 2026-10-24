@@ -1,0 +1,288 @@
+/* Checkout form and add-to-basket snackbar. These styles supplement index.css. */
+.checkout-panel {
+  overflow: hidden;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 22px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.checkout-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 17px;
+  margin-bottom: 2px;
+  background: #e9eddf;
+  border: 1px solid #dfe6d5;
+  border-radius: 9px;
+}
+
+.checkout-summary span {
+  color: #687967;
+  font-size: 12px;
+}
+
+.checkout-summary strong {
+  color: #244b36;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.checkout-form > label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  color: #354c3a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #dfe3d7;
+  border-radius: 7px;
+  background: #fffef9;
+  color: #24382c;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.checkout-form input {
+  min-height: 44px;
+}
+
+.checkout-form textarea {
+  min-height: 82px;
+  resize: vertical;
+}
+
+.checkout-form input::placeholder,
+.checkout-form textarea::placeholder {
+  color: #a0a69b;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  border-color: #78936d;
+  background: #fff;
+  box-shadow: 0 0 0 3px #78936d20;
+}
+
+.checkout-form input:disabled,
+.checkout-form textarea:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.optional-label {
+  color: #8a9487;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.checkout-error {
+  margin: 0;
+  padding: 12px 13px;
+  border: 1px solid #edc8c1;
+  border-radius: 7px;
+  background: #fff1ee;
+  color: #963f32;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.checkout-form .checkout-button {
+  min-height: 48px;
+  margin-top: 2px;
+}
+
+.checkout-form .checkout-button:disabled {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+}
+
+.checkout-form .continue-shopping {
+  margin: -5px auto 0;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.checkout-disclaimer {
+  margin: -2px 0 0;
+  color: #8a9387;
+  font-size: 10px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.cart-snackbar {
+  position: fixed;
+  z-index: 25;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  width: min(520px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fffdf6;
+  box-shadow: 0 12px 38px #17281e26;
+  animation: snackbar-in .2s ease-out;
+  cursor: pointer;
+  text-align: left;
+}
+
+.snackbar-basket {
+  position: relative;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 253, 246, 0.18);
+  color: #fffdf6;
+}
+
+.snackbar-count {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  font-size: 9px;
+  min-width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  background: #fffdf6;
+  color: var(--green);
+  border-radius: 20px;
+  padding: 0 4px;
+}
+
+.snackbar-message {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fffdf6;
+}
+
+.snackbar-total-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.snackbar-total {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fffdf6;
+}
+
+.cart-snackbar:hover {
+  background: var(--green-dark);
+}
+
+.order-success-content {
+  padding: 25px 22px;
+  overflow-y: auto;
+  color: #6f7d6d;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.order-success-content > span {
+  display: block;
+  margin-top: 25px;
+  color: #899286;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.order-success-content > strong {
+  display: block;
+  margin: 6px 0 15px;
+  padding: 15px;
+  border: 1px dashed #b9c7ad;
+  border-radius: 8px;
+  background: #eef1e7;
+  color: #244b36;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.order-success-content .primary-button {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.success-icon {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e2ebdc;
+  color: #315a3c;
+}
+
+@keyframes snackbar-in {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@media (max-width: 700px) {
+  .checkout-form {
+    gap: 15px;
+    padding: 17px 18px 24px;
+  }
+
+  .checkout-summary {
+    padding: 14px;
+  }
+
+  .cart-snackbar {
+    bottom: 14px;
+    gap: 8px;
+    padding: 9px 14px;
+  }
+
+  .snackbar-basket {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .snackbar-message {
+    font-size: 11px;
+  }
+
+  .snackbar-total {
+    font-size: 12px;
+  }
+}
