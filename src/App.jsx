@@ -7,7 +7,7 @@ import { categories } from './data/products.js';
 import './checkout-snackbar.css';
 
 
-const API_BASE_URL = 'http://localhost:4000';
+const API_BASE_URL = 'https://opponent-whose-entirely-fin.trycloudflare.com';
 
 const money = (amount) => `ETB ${Number(amount || 0).toLocaleString('en-ET')}`;
 
