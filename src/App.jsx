@@ -3,7 +3,7 @@ import {
   Search, ShoppingBasket, Plus, Minus, X, ArrowLeft, Leaf,
   MapPin, ChevronRight, Trash2, Check, Menu
 } from 'lucide-react';
-import './app.css';
+import './App.css';
 import './checkout-snackbar.css';
 
 
