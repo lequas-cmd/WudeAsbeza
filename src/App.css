@@ -381,6 +381,139 @@
   cursor: pointer;
 }
 
+
+.checkout-receipt {
+  margin-bottom: 22px;
+  padding: 16px;
+  border: 1px solid #e3e7de;
+  border-radius: 12px;
+  background: #fff;
+  color: #26372b;
+}
+
+.receipt-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.receipt-header h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #244b36;
+}
+
+.receipt-header p {
+  margin: 0;
+  font-size: 12px;
+  color: #788176;
+}
+
+.receipt-item-count {
+  flex-shrink: 0;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #f0f4ec;
+  color: #355b40;
+  font-size: 11px;
+}
+
+.receipt-table {
+  width: 100%;
+}
+
+.receipt-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 34px minmax(72px, auto);
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px dashed #e0e4dc;
+  font-size: 12px;
+}
+
+.receipt-column-headings {
+  padding: 0 0 9px;
+  color: #788176;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.receipt-column-headings span:nth-child(2),
+.receipt-quantity {
+  text-align: center;
+}
+
+.receipt-column-headings span:last-child,
+.receipt-line-total {
+  text-align: right;
+}
+
+.receipt-product {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.receipt-product > span {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.receipt-product small {
+  color: #788176;
+  font-size: 11px;
+}
+
+.receipt-line-total {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.receipt-totals {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.receipt-totals > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.receipt-totals > div > span:first-child {
+  color: #788176;
+}
+
+.receipt-grand-total {
+  margin-top: 3px;
+  padding-top: 14px;
+  border-top: 1px solid #dfe5da;
+  color: #244b36;
+  font-size: 15px !important;
+}
+
+@media (max-width: 360px) {
+  .checkout-receipt {
+    padding: 12px;
+  }
+
+  .receipt-row {
+    grid-template-columns: minmax(0, 1fr) 26px minmax(65px, auto);
+    gap: 5px;
+  }
+}
+
+
+
 .cart-snackbar .snackbar-dismiss:hover {
   background: #f0f1e9;
 }
@@ -417,3 +550,4 @@
     font-size: 10px;
   }
 }
+
