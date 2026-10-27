@@ -7,7 +7,7 @@ import './App.css';
 import './checkout-snackbar.css';
 
 
-const API_BASE_URL = 'https://tales-exterior-socks-were.trycloudflare.com';
+const API_BASE_URL = 'https://hon-fuel-solo-ignored.trycloudflare.com';
 
 function getTelegramInitData() {
   const initData = window.Telegram?.WebApp?.initData;
